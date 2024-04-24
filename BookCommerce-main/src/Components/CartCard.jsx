@@ -9,26 +9,26 @@ export default function CartCard({
 }) {
   return (
     <div className="row mb-3">
-      <div className="col-6">
+      <div className="col-md-6">
         <div className="row">
-          <div className="col-3">
+          <div className="col-md-3">
             <img
               className="product_image"
               src={data.thumbnail}
             />
           </div>
-          <div className="col-9">
+          <div className="col-md-9">
             <h4 className="mb-4">{data.title}</h4>
             <p>{data.description}</p>
           </div>
         </div>
       </div>
-      <div className="col-6">
+      <div className="col-md-6">
         <div className="row">
-          <div className="col-6"></div>
-          <div className="col-6">
+          <div className="col-md-6"></div>
+          <div className="col-md-6">
             <div className="row d-flex justify-content-end">
-              <div className="col-4">
+              <div className="col-md-4">
                 <select
                   defaultValue={data.quantity}
                   className="quantity_changer"
@@ -45,13 +45,13 @@ export default function CartCard({
                   <option value={4}>4</option>
                 </select>
               </div>
-              <div className="col-4">
+              <div className="col-md-4">
                 <h5>${data.price}</h5>
               </div>
             </div>
             <div className="row d-flex justify-content-end">
-              <div className="col-4"></div>
-              <div className="col-4">
+              <div className="col-md-4"></div>
+              <div className="col-md-4">
                 <Button type="submit" onClick={()=>dispatcher(deletedata(data.id))} className="remove">
                  Remove
                 </Button>
